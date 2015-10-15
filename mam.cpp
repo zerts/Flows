@@ -300,7 +300,8 @@ private:
         size_t currLevel = makeCurrLevel(level[curr], mode);
         for (size_t i = 0; i < graph.getVertexDeg(curr, mode); i++)
         {
-            if (level[graph.getEdgeOnPosition(curr, i, mode)] == currLevel && potentials[graph.getEdgeOnPosition(curr, i, mode)] != -1)
+            if (level[graph.getEdgeOnPosition(curr, i, mode)] == currLevel 
+                && potentials[graph.getEdgeOnPosition(curr, i, mode)] != -1)
             {
                 result += graph.getEdgeWithoutStream(curr, i, mode);
             }
