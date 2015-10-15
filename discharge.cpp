@@ -4,13 +4,13 @@
 #include <algorithm>
 #include <fstream>
 
-#define in cin
-#define out cout
+//#define in cin
+//#define out cout
 
 using namespace std;
 
-//ifstream in("input.txt");
-//ofstream out("output.txt");
+ifstream in("input.txt");
+ofstream out("output.txt");
 
 class Edge
 {
@@ -280,10 +280,10 @@ int main()
     StreamFinder sf;
     sf.findMaxStream(gr);
     out << gr.getStreamSize() << endl;
-    /*for (size_t i = 0; i < m; i++)
+    for (size_t i = 0; i < m; i++)
     {
-        out << gr.getDiametrOfEdgeOnPosition(input[i].first, input[i].second) << endl;
-    }*/
+        out << i << ' ' << gr.getEdgeWithStream(input[i].first, input[i].second) << endl;
+    }
     //gr.printStreamNet();
     //in.close();
     //out.close();
